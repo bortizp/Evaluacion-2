@@ -53,11 +53,6 @@ def clean_data():
 
         for col in df.select_dtypes(include=[object]).columns:
             df[col].fillna(df[col].mode()[0], inplace=True)
-        print(df['region'].unique())
-        print(df)
-        print(df.head())
-        print(df.info())
-        print(df.describe())
         print("Datos cargados correctamente.")
         #Columnas numericas
         numeric_cols = ['clientes_facturados', 'e1_kwh', 'e2_kwh', 'energia_kwh']
@@ -88,6 +83,5 @@ def clean_data():
         print(f"Error: No se encontró el archivo '{nombre_archivo}'.")
     except Exception as e:
         print(f"Ocurrió un error: {e}")
-
 
     return df
