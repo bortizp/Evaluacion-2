@@ -253,3 +253,4 @@ if __name__ == "__main__":
     for m, r in resumen["regresion"].items():
         print(f"[REG:{m}] R2={r['r2']:.3f} MAE={r['mae']:.2f} RMSE={r['rmse']:.2f}")
     print(f"Mejor clasificador: {resumen['mejor_clasificador']}")
+ 
